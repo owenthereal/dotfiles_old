@@ -29,7 +29,7 @@ ZSH_THEME="robbyrussell"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git osx bundler brew gem)
+plugins=(git osx bundler brew gem lein)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -46,3 +46,6 @@ alias lsa='ls -lah $LS_OPTIONS'
 alias l='ls -la $LS_OPTIONS'
 alias ll='ls -l $LS_OPTIONS'
 
+# Environment variables
+export JAVA_HOME=$(/usr/libexec/java_home)
+export JAVA_OPTS="-Xmx1024m -XX:MaxPermSize=512m -d32"

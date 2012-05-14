@@ -17,3 +17,6 @@ ln -s $(pwd)/.vimrc.after $HOME/.vimrc.after
 
 rm -rf $HOME/.ackrc
 ln -s $(pwd)/.ackrc $HOME/.ackrc
+
+rm -rf $HOME/.janus
+ln -s $(pwd)/.janus $HOME/.janus

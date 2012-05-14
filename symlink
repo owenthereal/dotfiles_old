@@ -8,3 +8,12 @@ ln -s $(pwd)/dircolors-solarized/dircolors.256dark $HOME/.dir_colors
 
 rm -f $HOME/.gitconfig
 ln -s $(pwd)/.gitconfig $HOME/.gitconfig
+
+rm -rf $HOME/.vimrc.before
+ln -s $(pwd)/.vimrc.before $HOME/.vimrc.before
+
+rm -rf $HOME/.vimrc.after
+ln -s $(pwd)/.vimrc.after $HOME/.vimrc.after
+
+rm -rf $HOME/.ackrc
+ln -s $(pwd)/.ackrc $HOME/.ackrc

@@ -20,3 +20,6 @@ ln -s $(pwd)/.ackrc $HOME/.ackrc
 
 rm -rf $HOME/.janus
 ln -s $(pwd)/.janus $HOME/.janus
+
+rm -rf $HOME/.gemrc
+ln -s $(pwd)/.gemrc $HOME/.gemrc

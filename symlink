@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+rm -rf $HOME/.zshrc
+ln -s $(pwd)/.zshrc $HOME/.zshrc
+
+rm -rf $HOME/.dir_colors
+ln -s $(pwd)/dircolors-solarized/dircolors.256dark $HOME/.dir_colors

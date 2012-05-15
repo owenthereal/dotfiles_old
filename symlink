@@ -23,3 +23,6 @@ ln -s $(pwd)/.janus $HOME/.janus
 
 rm -rf $HOME/.gemrc
 ln -s $(pwd)/.gemrc $HOME/.gemrc
+
+rm -rf $HOME/.emacs.d
+ln -s $(pwd)/.emacs.d $HOME/.emacs.d

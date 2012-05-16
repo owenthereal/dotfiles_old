@@ -78,6 +78,10 @@
                      (require 'color-theme-solarized)
                      (color-theme-solarized-dark))))
 
+;; emacs server
+(load "server")
+(unless (server-running-p) (server-start))
+
 ;; KEYBINDINGS
 ;;--------------------------------------------------
 

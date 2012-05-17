@@ -71,12 +71,11 @@
 (setq-default indent-tabs-mode nil)
 
 ;; solarized
-(when window-system
-  (require 'color-theme)
-  (eval-after-load 'color-theme
-    (progn
-      (require 'color-theme-solarized)
-      (color-theme-solarized-dark))))
+(require 'color-theme)
+(eval-after-load 'color-theme
+                 (progn
+                   (require 'color-theme-solarized)
+                   (color-theme-solarized-dark)))
 
 ;; emacs server
 (load "server")

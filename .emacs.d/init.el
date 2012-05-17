@@ -10,15 +10,15 @@
   (package-refresh-contents))
 
 (defvar my-packages '(starter-kit
-                       starter-kit-lisp
-                       starter-kit-bindings
-                       starter-kit-ruby
-                       starter-kit-eshell
-                       clojure-mode
-                       clojure-test-mode
-                       clojurescript-mode
-                       color-theme
-                       color-theme-solarized)
+                      starter-kit-lisp
+                      starter-kit-bindings
+                      starter-kit-ruby
+                      starter-kit-eshell
+                      clojure-mode
+                      clojure-test-mode
+                      clojurescript-mode
+                      color-theme
+                      color-theme-solarized)
 
   "A list of packages to ensure are installed at launch.")
 
@@ -39,7 +39,7 @@
 
 ;; dir to store all extra extensions
 (setq dotfiles-dir (file-name-directory
-                     (or (buffer-file-name) load-file-name)))
+                    (or (buffer-file-name) load-file-name)))
 
 (setq vendor-dir (concat dotfiles-dir "/vendor"))
 
@@ -74,9 +74,9 @@
 (when window-system
   (require 'color-theme)
   (eval-after-load 'color-theme
-                   (progn
-                     (require 'color-theme-solarized)
-                     (color-theme-solarized-dark))))
+    (progn
+      (require 'color-theme-solarized)
+      (color-theme-solarized-dark))))
 
 ;; emacs server
 (load "server")

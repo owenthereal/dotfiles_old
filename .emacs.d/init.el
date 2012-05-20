@@ -46,6 +46,10 @@
 ;; add my vendor dir to load path
 (add-to-list 'load-path vendor-dir)
 
+;; clojure-mode settings
+(defun turn-on-paredit () (paredit-mode 1))
+(add-hook 'clojure-mode-hook 'turn-on-paredit)
+
 ;; CODING STYLES
 ;;--------------------------------------------------
 

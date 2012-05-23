@@ -52,6 +52,7 @@ alias ll='ls -l $LS_OPTIONS'
 
 # Environment variables
 export JAVA_HOME=$(/usr/libexec/java_home)
-export JAVA_OPTS="-Xmx1024m -XX:MaxPermSize=512m -d32"
+export JAVA_OPTS="-Xmx1024m -XX:MaxPermSize=512m"
+export JRUBY_OPTS=--1.9
 
 [[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm

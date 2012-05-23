@@ -17,6 +17,9 @@
                       clojure-mode
                       clojure-test-mode
                       clojurescript-mode
+                      slime
+                      slime-repl
+                      paredit
                       color-theme
                       color-theme-solarized)
 

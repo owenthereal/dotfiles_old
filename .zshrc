@@ -50,6 +50,10 @@ alias lsa='ls -lah $LS_OPTIONS'
 alias l='ls -la $LS_OPTIONS'
 alias ll='ls -l $LS_OPTIONS'
 
+# More aliases
+alias brake='bundle exec rake'
+alias bexec='bundle exec'
+
 # Environment variables
 export JAVA_HOME=$(/usr/libexec/java_home)
 export JAVA_OPTS="-Xmx1024m -XX:MaxPermSize=512m"

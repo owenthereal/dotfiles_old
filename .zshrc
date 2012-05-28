@@ -29,7 +29,7 @@ ZSH_THEME="robbyrussell"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git osx bundler brew gem lein rvm mvim)
+plugins=(git osx brew gem lein rvm mvim)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -38,7 +38,7 @@ export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin
 # Customize to your needs...
 unsetopt correct_all
 
-export PATH=$(brew --prefix coreutils)/libexec/gnubin:/usr/local/bin:$PATH:$HOME/.rvm/bin
+export PATH=$(brew --prefix coreutils)/libexec/gnubin:/usr/local/bin:/usr/local/sbin:$PATH:$HOME/.rvm/bin
 
 # Enable color for ls
 eval $(dircolors ~/.dir_colors)

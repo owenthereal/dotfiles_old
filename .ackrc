@@ -1,12 +1,12 @@
---type-add=ruby=.haml,.rake,.rsel,.builder,.yml
+--type-add=ruby=.haml,.rake,.rsel,.builder,.yml,.scss
 --type-add=html=.html.erb,.html.haml
 --type-add=js=.js.erb
 --type-add=css=.sass
---type-add=ruby=.scss
 
 --type-set=markdown=.markdown,.md,.mdown
 --type-set=cucumber=.feature
 --type-set=clojure=.clj
+--type-set=java=.java
 
 --ignore-dir=log
 --ignore-dir=backups
@@ -32,3 +32,4 @@
 --follow
 --group
 --clojure
+--java

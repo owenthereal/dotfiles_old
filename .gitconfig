@@ -46,3 +46,7 @@
   account = jingweno
 [branch]
   autosetuprebase = always
+[mergetool]
+  keepbackup = false
+  keeptemporaries = false
+  prompt = false

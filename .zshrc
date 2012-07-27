@@ -55,7 +55,7 @@ alias brake='bundle exec rake'
 alias bexec='bundle exec'
 
 # Environment variables
-export JAVA_HOME=$(/usr/libexec/java_home)
+export JAVA_HOME=$(/usr/libexec/java_home -v 1.7)
 export JAVA_OPTS="-Xmx1024m -XX:MaxPermSize=512m"
 export JRUBY_OPTS=--1.9
 

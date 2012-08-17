@@ -27,9 +27,6 @@ ln -s $(pwd)/.gemrc $HOME/.gemrc
 rm -rf $HOME/.emacs.d
 ln -s $(pwd)/.emacs.d $HOME/.emacs.d
 
-rm -rf $HOME/.janus/VimClojure
-ln -s $(pwd)/VimClojure $HOME/.janus/VimClojure
-
 rm -rf $HOME/.janus/go
 mkdir -p $HOME/.janus/go
 ln -s $(brew --prefix go)/misc/vim $HOME/.janus/go

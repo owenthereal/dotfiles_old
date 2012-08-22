@@ -9,6 +9,9 @@ ln -s $(pwd)/dircolors-solarized/dircolors.256dark $HOME/.dir_colors
 rm -f $HOME/.gitconfig
 ln -s $(pwd)/.gitconfig $HOME/.gitconfig
 
+rm -f $HOME/.gitignore_global
+ln -s $(pwd)/.gitignore_global $HOME/.gitignore_global
+
 rm -rf $HOME/.vimrc.before
 ln -s $(pwd)/.vimrc.before $HOME/.vimrc.before
 

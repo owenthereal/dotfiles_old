@@ -37,7 +37,7 @@
 [core]
   pager = less -FRSX
   whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol
-	excludesfile = /Users/oou/.gitignore_global
+	excludesfile = /Users/Owen/.gitignore
   editor = vim
   autocrlf = input
 [apply]

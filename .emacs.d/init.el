@@ -14,6 +14,7 @@
                       starter-kit-bindings
                       starter-kit-ruby
                       starter-kit-eshell
+                      scala-mode
                       clojure-mode
                       clojure-test-mode
                       clojurescript-mode
@@ -53,6 +54,16 @@
 (defun turn-on-paredit () (paredit-mode 1))
 (add-hook 'clojure-mode-hook 'turn-on-paredit)
 
+;; load the ensime lisp code...
+(add-to-list 'load-path "~/.dotfiles/ensime/elisp/")
+(require 'ensime)
+
+;; This step causes the ensime-mode to be started whenever
+;; scala-mode is started for a buffer. You may have to customize this
+;; step
+;; if you're not using the standard scala mode.
+(add-hook 'scala-mode-hook 'ensime-scala-mode-hook)
+
 ;; CODING STYLES
 ;;--------------------------------------------------
 
@@ -80,9 +91,9 @@
 ;; solarized
 (require 'color-theme)
 (eval-after-load 'color-theme
-                 (progn
-                   (require 'color-theme-solarized)
-                   (color-theme-solarized-dark)))
+  (progn
+    (require 'color-theme-solarized)
+    (color-theme-solarized-dark)))
 
 ;; emacs server
 (load "server")

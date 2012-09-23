@@ -1,9 +1,6 @@
-[submodule "VimClojure"]
-	path = VimClojure
-	url = git://github.com/vim-scripts/VimClojure.git
-[submodule "asciidoc-vim"]
-	path = asciidoc-vim
-	url = git://github.com/dagwieers/asciidoc-vim.git
 [submodule "dircolors-solarized"]
 	path = dircolors-solarized
 	url = git://github.com/seebi/dircolors-solarized.git
+[submodule "asciidoc-vim"]
+	path = asciidoc-vim
+	url = git://github.com/dagwieers/asciidoc-vim.git

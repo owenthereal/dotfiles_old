@@ -52,6 +52,6 @@ Thumbs.db
 # #####################
 .idea
 .idea_modules
-.classpath
-.project
+#.classpath
+#.project
 .settings

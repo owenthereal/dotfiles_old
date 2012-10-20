@@ -58,5 +58,6 @@ alias bexec='bundle exec'
 export JAVA_HOME=$(/usr/libexec/java_home -v 1.7)
 export JAVA_OPTS="-Xmx1024m"
 export JRUBY_OPTS=--1.9
+export SBT_OPTS="-XX:+CMSClassUnloadingEnabled -XX:MaxPermSize=256M"
 
 [[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm

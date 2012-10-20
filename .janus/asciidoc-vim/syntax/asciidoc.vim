@@ -1,1 +1,0 @@
-/Users/Owen/.dotfiles/asciidoc-vim/asciidoc.vim

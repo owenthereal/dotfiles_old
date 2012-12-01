@@ -39,6 +39,8 @@ export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin
 unsetopt correct_all
 
 export PATH=$(brew --prefix python):$(brew --prefix coreutils)/libexec/gnubin:/usr/local/bin:/usr/local/sbin:$PATH:$HOME/.rvm/bin
+export PATH=$HOME/.dotfiles/depot_tools:/usr/local/share/npm/bin:$PATH
+export PATH=$HOME/bin:$HOME/Applications/dart/dart-sdk/bin:$HOME/Applications/dart/Chromium.app/Contents/MacOS/:$PATH
 
 # Enable color for ls
 eval $(dircolors ~/.dir_colors)
@@ -59,5 +61,6 @@ export JAVA_HOME=$(/usr/libexec/java_home -v 1.7)
 export JAVA_OPTS="-Xmx1024m"
 export JRUBY_OPTS=--1.9
 export SBT_OPTS="-XX:+CMSClassUnloadingEnabled -XX:MaxPermSize=256M"
+export DART_FLAGS='--enable_type_checks --enable_asserts'
 
 [[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm

@@ -61,6 +61,7 @@ export JAVA_HOME=$(/usr/libexec/java_home -v 1.7)
 export JAVA_OPTS="-Xmx1024m"
 export JRUBY_OPTS=--1.9
 export SBT_OPTS="-XX:+CMSClassUnloadingEnabled -XX:MaxPermSize=256M"
+export GOBIN=$HOME/bin
 export DART_FLAGS='--enable_type_checks --enable_asserts'
 
 [[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm

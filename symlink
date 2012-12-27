@@ -38,4 +38,4 @@ ln -s $(brew --prefix go)/misc/vim $HOME/.janus/go
 
 rm -rf $HOME/.janus/asciidoc-vim
 mkdir -p $HOME/.janus/asciidoc-vim/syntax
-ln -s $(pwd)/asciidoc-vim/asciidoc.vim $HOME/.janus/asciidoc-vim/syntax/asciidoc.vim
+ln -s $(pwd)/asciidoc-vim/asciidoc.vim $(pwd)/.janus/asciidoc-vim/syntax/asciidoc.vim

@@ -10,3 +10,6 @@
 [submodule "tmux-MacOSX-pasteboard"]
 	path = tmux-MacOSX-pasteboard
 	url = git://github.com/ChrisJohnsen/tmux-MacOSX-pasteboard.git
+[submodule "tabular"]
+	path = tabular
+	url = https://github.com/godlygeek/tabular

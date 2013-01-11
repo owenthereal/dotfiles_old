@@ -50,3 +50,5 @@
   keepbackup = false
   keeptemporaries = false
   prompt = false
+[help]
+	autocorrect = 1

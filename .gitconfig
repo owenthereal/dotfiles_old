@@ -4,16 +4,24 @@
 [alias]
   st = status
   co = checkout
-  cm = commit
   pom = push origin master
   br = branch
   ci = commit
   rb = rebase
   df = diff
-  lg = log -p
+  lp = log -p
+  l = log --graph --pretty=format':%C(yellow)%h%Cblue%d%Creset %s %C(white) %an, %ar%Creset'
+  lol = log --pretty=oneline --abbrev-commit --graph --decorate
+  unstage = reset HEAD
+  staged = diff --cached
+  unstaged = diff
+  current-branch = !git symbolic-ref -q HEAD | sed -e 's|^refs/heads/||'
+  track = checkout -t
   who = shortlog -s --
-  oneline = log --pretty='%Cblue%h%Creset - %an - %Cgreen%s%Creset'
-  hist = log --pretty=format:\"%h | %ad | %s %Cgreen[%an]%Creset%Cred%d%Creset\" --graph --date=short
+[status]
+  submodule = 1
+[push]
+  default = current
 [color]
   diff = auto
   status = auto
@@ -37,11 +45,11 @@
 [core]
   pager = less -FRSX
   whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol
-	excludesfile = /Users/Owen/.gitignore
+  excludesfile = ~/.gitignore
   editor = vim
   autocrlf = input
 [apply]
-  whitespace = nowarn
+  whitespace = warn
 [heroku]
   account = jingweno
 [branch]
@@ -51,4 +59,4 @@
   keeptemporaries = false
   prompt = false
 [help]
-	autocorrect = 1
+  autocorrect = 1

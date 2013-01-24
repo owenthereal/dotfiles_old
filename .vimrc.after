@@ -11,3 +11,16 @@ set tags+=gems.tags
 
 map <Leader>f :NERDTreeFind<CR>
 map <Leader>a :Ack<space>
+
+map <Leader>rb :call VimuxRunCommand("clear; rspec " . bufname("%"))<CR>
+map <Leader>rq :call VimuxRunCommand("clear; rspec " . bufname("%"), 0)<CR>
+map <Leader>vp :VimuxPromptCommand<CR>
+map <Leader>vl :VimuxRunLastCommand<CR>
+map <Leader>vi :VimuxInspectRunner<CR>
+map <Leader>vq :VimuxCloseRunner<CR>
+map <Leader>vx :VimuxClosePanes<CR>
+map <Leader>vk :VimuxInterruptRunner<CR>
+map <Leader>vc :VimuxClearRunnerHistory<CR>
+vmap <LocalLeader>vs "vy :call VimuxRunCommand(@v . "\n", 0)<CR>
+nmap <LocalLeader>vs vip<LocalLeader>vs<CR>
+let VimuxUseNearestPane = 1

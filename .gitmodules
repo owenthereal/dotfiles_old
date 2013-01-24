@@ -13,3 +13,6 @@
 [submodule "tabular"]
 	path = tabular
 	url = https://github.com/godlygeek/tabular
+[submodule "vimux"]
+	path = vimux
+	url = git://github.com/benmills/vimux.git

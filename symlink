@@ -42,3 +42,6 @@ ln -s $(pwd)/asciidoc-vim/asciidoc.vim $(pwd)/.janus/asciidoc-vim/syntax/asciido
 
 rm -rf $HOME/.janus/tabular
 ln -s $(pwd)/tabular $(pwd)/.janus/tabular
+
+rm -rf $HOME/.janus/vimux
+ln -s $(pwd)/vimux $(pwd)/.janus/vimux

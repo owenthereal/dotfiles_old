@@ -40,7 +40,7 @@ unsetopt correct_all
 
 export PATH=$(brew --prefix python):$(brew --prefix coreutils)/libexec/gnubin:/usr/local/bin:/usr/local/sbin:$PATH:$HOME/.rvm/bin
 export PATH=$HOME/.dotfiles/depot_tools:/usr/local/share/npm/bin:$PATH
-export PATH=$HOME/bin:$HOME/Applications/dart/dart-sdk/bin:$HOME/Applications/dart/Chromium.app/Contents/MacOS/:$PATH
+export PATH=$HOME/bin:$HOME/Applications/dart/dart-sdk/bin:$HOME/Applications/dart/Chromium.app/Contents/MacOS:$PATH
 
 # Enable color for ls
 eval $(dircolors ~/.dir_colors)

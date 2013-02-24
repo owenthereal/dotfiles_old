@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+rm -rf $HOME/.zshenv
+ln -s $(pwd)/.zshenv $HOME/.zshenv
+
 rm -rf $HOME/.zshrc
 ln -s $(pwd)/.zshrc $HOME/.zshrc
 

@@ -29,16 +29,16 @@ ZSH_THEME="robbyrussell"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git osx brew gem lein rvm mvim)
+plugins=(git osx brew gem lein mvim rake sublime)
 
 source $ZSH/oh-my-zsh.sh
 
-export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin
+export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:$PATH
 
 # Customize to your needs...
 unsetopt correct_all
 
-export PATH=$(brew --prefix python):$(brew --prefix coreutils)/libexec/gnubin:/usr/local/bin:/usr/local/sbin:$PATH:$HOME/.rvm/bin
+export PATH=$(brew --prefix python):$(brew --prefix coreutils)/libexec/gnubin:/usr/local/bin:/usr/local/sbin:$PATH
 export PATH=$HOME/.dotfiles/depot_tools:/usr/local/share/npm/bin:$PATH
 export PATH=$HOME/bin:$HOME/Applications/dart/dart-sdk/bin:$HOME/Applications/dart/Chromium.app/Contents/MacOS:$PATH
 
@@ -52,10 +52,6 @@ alias lsa='ls -lah $LS_OPTIONS'
 alias l='ls -la $LS_OPTIONS'
 alias ll='ls -l $LS_OPTIONS'
 
-# More aliases
-alias brake='bundle exec rake'
-alias bexec='bundle exec'
-
 # Environment variables
 export JAVA_HOME=$(/usr/libexec/java_home -v 1.7)
 export JAVA_OPTS="-Xmx1024m"
@@ -65,4 +61,4 @@ export GOROOT=$(brew --prefix go)
 export GOBIN=$HOME/bin
 export DART_FLAGS='--enable_type_checks --enable_asserts'
 
-[[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi

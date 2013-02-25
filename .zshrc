@@ -59,6 +59,7 @@ export JRUBY_OPTS=--1.9
 export SBT_OPTS="-XX:+CMSClassUnloadingEnabled -XX:MaxPermSize=256M"
 export GOROOT=$(brew --prefix go)
 export GOBIN=$HOME/bin
+export GOPATH=$HOME/golibs
 export DART_FLAGS='--enable_type_checks --enable_asserts'
 
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi

@@ -40,7 +40,7 @@ unsetopt correct_all
 
 export PATH=$(brew --prefix python):$(brew --prefix coreutils)/libexec/gnubin:/usr/local/bin:/usr/local/sbin:$PATH
 export PATH=$HOME/.dotfiles/depot_tools:/usr/local/share/npm/bin:$PATH
-export PATH=$HOME/bin:$HOME/Applications/dart/dart-sdk/bin:$HOME/Applications/dart/Chromium.app/Contents/MacOS:$PATH
+export PATH=$HOME/gocode/bin:$HOME/bin:$HOME/Applications/dart/dart-sdk/bin:$HOME/Applications/dart/Chromium.app/Contents/MacOS:$PATH
 
 # Enable color for ls
 eval $(dircolors ~/.dir_colors)
@@ -58,7 +58,6 @@ export JAVA_OPTS="-Xmx1024m"
 export JRUBY_OPTS=--1.9
 export SBT_OPTS="-XX:+CMSClassUnloadingEnabled -XX:MaxPermSize=256M"
 export GOROOT=$(brew --prefix go)
-export GOBIN=$HOME/bin
 export GOPATH=$HOME/gocode
 export DART_FLAGS='--enable_type_checks --enable_asserts'
 

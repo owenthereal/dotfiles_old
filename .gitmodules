@@ -16,3 +16,6 @@
 [submodule "vimux"]
 	path = vimux
 	url = git://github.com/benmills/vimux.git
+[submodule "vimux-ruby-test"]
+	path = vimux-ruby-test
+	url = git://github.com/pgr0ss/vimux-ruby-test.git

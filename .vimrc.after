@@ -27,5 +27,9 @@ vmap <LocalLeader>vs "vy :call VimuxRunCommand(@v . "\n", 0)<CR>
 nmap <LocalLeader>vs vip<LocalLeader>vs<CR>
 let VimuxUseNearestPane = 1
 
+map <Leader>rf :RunRubyFocusedTest<CR>
+map <Leader>rc :RunRubyFocusedContext<CR>
+map <Leader>ra :RunAllRubyTests<CR>
+
 autocmd CursorMovedI * if pumvisible() == 0|silent! pclose|endif
 autocmd InsertLeave * if pumvisible() == 0|silent! pclose|endif

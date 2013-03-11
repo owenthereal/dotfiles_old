@@ -51,3 +51,6 @@ ln -s $(pwd)/tabular $(pwd)/.janus/tabular
 
 rm -rf $HOME/.janus/vimux
 ln -s $(pwd)/vimux $(pwd)/.janus/vimux
+
+rm -rf $HOME/.janus/vimux-ruby-test
+ln -s $(pwd)/vimux-ruby-test $(pwd)/.janus/vimux-ruby-test

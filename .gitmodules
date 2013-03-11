@@ -5,8 +5,8 @@
   path = asciidoc-vim
   url = git://github.com/dagwieers/asciidoc-vim.git
 [submodule "gocode"]
-  path = gocode
-  url = git://github.com/nsf/gocode.git
+	path = gocode
+	url = git://github.com/nsf/gocode.git
 [submodule "tmux-MacOSX-pasteboard"]
 	path = tmux-MacOSX-pasteboard
 	url = git://github.com/ChrisJohnsen/tmux-MacOSX-pasteboard.git

@@ -39,6 +39,9 @@ ln -s $(pwd)/.emacs.d $HOME/.emacs.d
 rm -rf $HOME/.janus/go
 ln -s $(brew --prefix go)/misc/vim $HOME/.janus/go
 
+rm -rf $HOME/.janus/gocode
+ln -s $(pwd)/gocode/vim $HOME/.janus/gocode
+
 rm -rf $HOME/.janus/asciidoc-vim
 mkdir -p $HOME/.janus/asciidoc-vim/syntax
 ln -s $(pwd)/asciidoc-vim/asciidoc.vim $(pwd)/.janus/asciidoc-vim/syntax/asciidoc.vim

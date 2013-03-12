@@ -19,3 +19,6 @@
 [submodule "vimux-ruby-test"]
 	path = vimux-ruby-test
 	url = git://github.com/pgr0ss/vimux-ruby-test.git
+[submodule "vimux-golang"]
+	path = vimux-golang
+	url = git://github.com/benmills/vimux-golang.git

@@ -54,3 +54,6 @@ ln -s $(pwd)/vimux $(pwd)/.janus/vimux
 
 rm -rf $HOME/.janus/vimux-ruby-test
 ln -s $(pwd)/vimux-ruby-test $(pwd)/.janus/vimux-ruby-test
+
+rm -rf $HOME/.janus/vimux-golang
+ln -s $(pwd)/vimux-golang $(pwd)/.janus/vimux-golang

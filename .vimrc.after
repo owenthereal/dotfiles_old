@@ -31,5 +31,7 @@ map <Leader>rf :RunRubyFocusedTest<CR>
 map <Leader>rc :RunRubyFocusedContext<CR>
 map <Leader>ra :RunAllRubyTests<CR>
 
+map <Leader>gt :wa<CR> :GolangTestCurrentPackage<CR>
+
 autocmd CursorMovedI * if pumvisible() == 0|silent! pclose|endif
 autocmd InsertLeave * if pumvisible() == 0|silent! pclose|endif

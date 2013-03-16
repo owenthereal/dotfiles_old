@@ -33,5 +33,9 @@ map <Leader>ra :RunAllRubyTests<CR>
 
 map <Leader>gt :wa<CR> :GolangTestCurrentPackage<CR>
 
+map <Leader>rg :ZeusConsole<CR>
+map <Leader>rr :ZeusRake<CR>
+"map <Leader>rg :ZeusGenerate<space>
+
 autocmd CursorMovedI * if pumvisible() == 0|silent! pclose|endif
 autocmd InsertLeave * if pumvisible() == 0|silent! pclose|endif

@@ -22,6 +22,3 @@
 [submodule "vimux-golang"]
 	path = vimux-golang
 	url = git://github.com/benmills/vimux-golang.git
-[submodule "vim-dart"]
-	path = vim-dart
-	url = git://github.com/bartekd/vim-dart.git

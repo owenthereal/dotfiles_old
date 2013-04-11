@@ -50,6 +50,7 @@ Thumbs.db
 
 # IDE #
 # #####################
+*.iml
 .idea
 .idea_modules
 #.classpath

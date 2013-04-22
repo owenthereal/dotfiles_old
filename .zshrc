@@ -61,4 +61,6 @@ export GOROOT=$(brew --prefix go)
 export GOPATH=$HOME/gocode
 export DART_FLAGS='--enable_type_checks --enable_asserts'
 
+fpath=(/usr/local/share/zsh-completions $fpath)
+
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi

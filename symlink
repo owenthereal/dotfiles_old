@@ -58,5 +58,5 @@ ln -s $(pwd)/vimux-ruby-test $(pwd)/.janus/vimux-ruby-test
 rm -rf $HOME/.janus/vimux-golang
 ln -s $(pwd)/vimux-golang $(pwd)/.janus/vimux-golang
 
-rm -rf $HOME/.janus/vim-dart
-ln -s $(pwd)/vim-dart $(pwd)/.janus/vim-dart
+rm -rf $HOME/.janus/dart-vim-plugin
+ln -s $(pwd)/dart-vim-plugin $(pwd)/.janus/dart-vim-plugin

@@ -32,7 +32,9 @@ map <Leader>rc :RunRubyFocusedContext<CR>
 map <Leader>ra :RunAllRubyTests<CR>
 
 map <Leader>gf :Fmt<CR> :w<CR>
-map <Leader>ga :wa<CR> :call VimuxRunCommand("clear; go test ./...")<CR>
+map <Leader>ga :wa<CR> :call VimuxRunCommand("clear; go fmt")<CR>
+map <Leader>gt :wa<CR> :call VimuxRunCommand("clear; go test -v ./...")<CR>
+map <Leader>gb :wa<CR> :call VimuxRunCommand("clear; go build -v")<CR>
 
 map <Leader>rg :ZeusConsole<CR>
 map <Leader>rr :ZeusRake<CR>

@@ -25,3 +25,6 @@
 [submodule "dart-vim-plugin"]
 	path = dart-vim-plugin
 	url = git://github.com/dart-lang/dart-vim-plugin.git
+[submodule "lint"]
+	path = lint
+	url = git@github.com:golang/lint.git

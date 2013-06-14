@@ -45,7 +45,7 @@
 [core]
   pager = less -FRSX
   whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol
-  excludesfile = ~/.gitignore
+  excludesfile = /opt/boxen/config/git/gitignore
   editor = vim
 [apply]
   whitespace = warn
@@ -59,3 +59,9 @@
   prompt = false
 [help]
   autocorrect = 1
+
+[credential]
+helper = /opt/boxen/bin/boxen-git-credential
+
+[hub]
+protocol = https

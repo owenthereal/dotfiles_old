@@ -33,7 +33,9 @@ plugins=(git osx brew gem lein mvim rake sublime bundler)
 
 source $ZSH/oh-my-zsh.sh
 
-export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:$PATH
+export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:$PATH
+
+[ -f /opt/boxen/env.sh ] && source /opt/boxen/env.sh
 
 # Customize to your needs...
 unsetopt correct_all
@@ -63,4 +65,4 @@ export DART_FLAGS='--enable_type_checks --enable_asserts'
 
 fpath=(/usr/local/share/zsh-completions $fpath)
 
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+#if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi

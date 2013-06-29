@@ -33,16 +33,28 @@ plugins=(git osx brew gem lein mvim rake sublime bundler)
 
 source $ZSH/oh-my-zsh.sh
 
-export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:$PATH
+export EDITOR=vim
+
+export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:$PATH
 
 [ -f /opt/boxen/env.sh ] && source /opt/boxen/env.sh
+
+export PATH=$GOPATH/bin:$PATH
 
 # Customize to your needs...
 unsetopt correct_all
 
-export PATH=$(brew --prefix python):$(brew --prefix coreutils)/libexec/gnubin:/usr/local/bin:/usr/local/sbin:$PATH
+export PATH=$(brew --prefix coreutils)/libexec/gnubin:/usr/local/bin:/usr/local/sbin:$PATH
 export PATH=$HOME/.dotfiles/depot_tools:/usr/local/share/npm/bin:$PATH
-export PATH=$HOME/gocode/bin:$HOME/bin:$HOME/Applications/dart/dart-sdk/bin:$HOME/Applications/dart/Chromium.app/Contents/MacOS:$PATH
+export PATH=$HOME/bin:$HOME/Applications/dart/dart-sdk/bin:$HOME/Applications/dart/Chromium.app/Contents/MacOS:$PATH
+
+# Environment variables
+export JAVA_HOME=$(/usr/libexec/java_home -v 1.7)
+export JAVA_OPTS="-Xmx1024m"
+export JRUBY_OPTS=--1.9
+export SBT_OPTS="-XX:+CMSClassUnloadingEnabled -XX:MaxPermSize=256M"
+export GOPATH=$HOME/gocode
+export DART_FLAGS='--enable_type_checks --enable_asserts'
 
 # Enable color for ls
 eval $(dircolors ~/.dir_colors)
@@ -54,15 +66,6 @@ alias lsa='ls -lah $LS_OPTIONS'
 alias l='ls -la $LS_OPTIONS'
 alias ll='ls -l $LS_OPTIONS'
 
-# Environment variables
-export JAVA_HOME=$(/usr/libexec/java_home -v 1.7)
-export JAVA_OPTS="-Xmx1024m"
-export JRUBY_OPTS=--1.9
-export SBT_OPTS="-XX:+CMSClassUnloadingEnabled -XX:MaxPermSize=256M"
-export GOROOT=$(brew --prefix go)
-export GOPATH=$HOME/gocode
-export DART_FLAGS='--enable_type_checks --enable_asserts'
-
 fpath=(/usr/local/share/zsh-completions $fpath)
 
-#if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+eval "$(gh alias -s)"

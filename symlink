@@ -63,3 +63,6 @@ ln -s $(pwd)/vimux-golang $(pwd)/.janus/vimux-golang
 
 rm -rf $HOME/.janus/dart-vim-plugin
 ln -s $(pwd)/dart-vim-plugin $(pwd)/.janus/dart-vim-plugin
+
+rm -rf $HOME/.janus/vim-airline
+ln -s $(pwd)/vim-airline $(pwd)/.janus/vim-airline

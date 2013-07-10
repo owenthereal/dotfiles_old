@@ -67,5 +67,3 @@ alias l='ls -la $LS_OPTIONS'
 alias ll='ls -l $LS_OPTIONS'
 
 fpath=(/usr/local/share/zsh-completions $fpath)
-
-eval "$(gh alias -s)"

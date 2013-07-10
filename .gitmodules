@@ -28,3 +28,6 @@
 [submodule "lint"]
 	path = lint
 	url = git@github.com:golang/lint.git
+[submodule "vim-airline"]
+	path = vim-airline
+	url = git@github.com:bling/vim-airline.git

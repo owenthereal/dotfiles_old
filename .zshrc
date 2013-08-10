@@ -37,6 +37,16 @@ export EDITOR=vim
 
 export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:$PATH
 
+# Environment variables
+export JAVA_HOME=$(/usr/libexec/java_home -v 1.7)
+export JAVA_OPTS="-Xmx1024m"
+export JRUBY_OPTS=--1.9
+export SBT_OPTS="-XX:+CMSClassUnloadingEnabled -XX:MaxPermSize=256M"
+export GOPATH=$HOME/gocode
+export DART_FLAGS='--enable_type_checks --enable_asserts'
+
+export PATH=$GOPATH/bin:$PATH
+
 [ -f /opt/boxen/env.sh ] && source /opt/boxen/env.sh
 
 export PATH=$GOPATH/bin:$PATH
@@ -47,14 +57,6 @@ unsetopt correct_all
 export PATH=$(brew --prefix coreutils)/libexec/gnubin:/usr/local/bin:/usr/local/sbin:$PATH
 export PATH=$HOME/.dotfiles/depot_tools:/usr/local/share/npm/bin:$PATH
 export PATH=$HOME/bin:$HOME/Applications/dart/dart-sdk/bin:$HOME/Applications/dart/Chromium.app/Contents/MacOS:$PATH
-
-# Environment variables
-export JAVA_HOME=$(/usr/libexec/java_home -v 1.7)
-export JAVA_OPTS="-Xmx1024m"
-export JRUBY_OPTS=--1.9
-export SBT_OPTS="-XX:+CMSClassUnloadingEnabled -XX:MaxPermSize=256M"
-export GOPATH=$HOME/gocode
-export DART_FLAGS='--enable_type_checks --enable_asserts'
 
 # Enable color for ls
 eval $(dircolors ~/.dir_colors)

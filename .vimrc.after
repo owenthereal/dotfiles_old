@@ -41,6 +41,7 @@ nnoremap <Leader>gf :Fmt<CR> :w<CR>
 nnoremap <Leader>ga :wa<CR> :call VimuxRunCommand("clear; go fmt ./...")<CR>
 nnoremap <Leader>gt :wa<CR> :call VimuxRunCommand("clear; go test ./...")<CR>
 nnoremap <Leader>gb :wa<CR> :call VimuxRunCommand("clear; go build -v")<CR>
+nnoremap <Leader>gr :wa<CR> :call VimuxRunCommand("clear; go run *.go")<CR>
 
 autocmd CursorMovedI * if pumvisible() == 0|silent! pclose|endif
 autocmd InsertLeave * if pumvisible() == 0|silent! pclose|endif

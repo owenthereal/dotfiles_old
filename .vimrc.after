@@ -11,34 +11,36 @@ set cursorline
 set tags+=gems.tags
 set spell
 
-map <Leader>f :NERDTreeFind<CR>
-map <Leader>a :Ack<space>
+cmap w!! %!sudo tee > /dev/null %
 
-map <Leader>rb :call VimuxRunCommand("clear; rspec " . bufname("%"))<CR>
-map <Leader>rq :call VimuxRunCommand("clear; rspec " . bufname("%"), 0)<CR>
-map <Leader>vp :VimuxPromptCommand<CR>
-map <Leader>vl :VimuxRunLastCommand<CR>
-map <Leader>vi :VimuxInspectRunner<CR>
-map <Leader>vq :VimuxCloseRunner<CR>
-map <Leader>vx :VimuxClosePanes<CR>
-map <Leader>vk :VimuxInterruptRunner<CR>
-map <Leader>vc :VimuxClearRunnerHistory<CR>
-vmap <LocalLeader>vs "vy :call VimuxRunCommand(@v . "\n", 0)<CR>
-nmap <LocalLeader>vs vip<LocalLeader>vs<CR>
+noremap <Leader>f :NERDTreeFind<CR>
+noremap <Leader>a :Ack<space>
+
+nnoremap <leader>" viw<esc>a"<esc>hbi"<esc>lel
+nnoremap <leader>' viw<esc>a'<esc>hbi'<esc>lel
+
+nnoremap <silent> <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>
+
 let VimuxUseNearestPane = 1
+nnoremap <Leader>vp :VimuxPromptCommand<CR>
+nnoremap <Leader>vl :VimuxRunLastCommand<CR>
+nnoremap <Leader>vi :VimuxInspectRunner<CR>
+nnoremap <Leader>vq :VimuxCloseRunner<CR>
+nnoremap <Leader>vk :VimuxInterruptRunner<CR>
+nnoremap <Leader>vc :VimuxClearRunnerHistory<CR>
+vnoremap <LocalLeader>vs "vy :call VimuxRunCommand(@v . "\n", 0)<CR>
+nnoremap <LocalLeader>vs vip<LocalLeader>vs<CR>
 
-map <Leader>rf :RunRubyFocusedTest<CR>
-map <Leader>rc :RunRubyFocusedContext<CR>
-map <Leader>ra :RunAllRubyTests<CR>
+nnoremap <Leader>rf :RunRubyFocusedTest<CR>
+nnoremap <Leader>rc :RunRubyFocusedContext<CR>
+nnoremap <Leader>ra :RunAllRubyTests<CR>
+nnoremap <Leader>rg :ZeusConsole<CR>
+nnoremap <Leader>rr :ZeusRake<CR>
 
-map <Leader>gf :Fmt<CR> :w<CR>
-map <Leader>ga :wa<CR> :call VimuxRunCommand("clear; go fmt")<CR>
-map <Leader>gt :wa<CR> :call VimuxRunCommand("clear; go test ./...")<CR>
-map <Leader>gb :wa<CR> :call VimuxRunCommand("clear; go build -v")<CR>
-
-map <Leader>rg :ZeusConsole<CR>
-map <Leader>rr :ZeusRake<CR>
-"map <Leader>rg :ZeusGenerate<space>
+nnoremap <Leader>gf :Fmt<CR> :w<CR>
+nnoremap <Leader>ga :wa<CR> :call VimuxRunCommand("clear; go fmt ./...")<CR>
+nnoremap <Leader>gt :wa<CR> :call VimuxRunCommand("clear; go test ./...")<CR>
+nnoremap <Leader>gb :wa<CR> :call VimuxRunCommand("clear; go build -v")<CR>
 
 autocmd CursorMovedI * if pumvisible() == 0|silent! pclose|endif
 autocmd InsertLeave * if pumvisible() == 0|silent! pclose|endif

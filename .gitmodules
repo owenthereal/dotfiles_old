@@ -31,3 +31,6 @@
 [submodule "vim-airline"]
 	path = vim-airline
 	url = git@github.com:bling/vim-airline.git
+[submodule "VimClojure"]
+	path = VimClojure
+	url = https://github.com/vim-scripts/VimClojure.git

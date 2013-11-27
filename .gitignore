@@ -57,3 +57,6 @@ Thumbs.db
 .project
 .settings
 .metadata
+
+# Go
+*.test

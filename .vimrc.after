@@ -39,8 +39,8 @@ nnoremap <Leader>rr :ZeusRake<CR>
 
 nnoremap <Leader>gf :Fmt<CR> :w<CR>
 nnoremap <Leader>ga :wa<CR> :call VimuxRunCommand("clear; go fmt ./...")<CR>
-nnoremap <Leader>gt :wa<CR> :call VimuxRunCommand("clear; go test ./...")<CR>
-nnoremap <Leader>gb :wa<CR> :call VimuxRunCommand("clear; go build -v")<CR>
+nnoremap <Leader>gt :wa<CR> :call VimuxRunCommand("clear; [ -f script/test ] && script/test \|\| go test ./...")<CR>
+nnoremap <Leader>gb :wa<CR> :call VimuxRunCommand("clear; [ -f script/build ] && script/build \|\| go build -v")<CR>
 nnoremap <leader>gr :call VimuxSendKeys("C-c") <CR> :call VimuxRunCommand("clear; find . -name '*.go' -not -name '*_test.go' \| xargs go run") <CR>
 
 autocmd CursorMovedI * if pumvisible() == 0|silent! pclose|endif

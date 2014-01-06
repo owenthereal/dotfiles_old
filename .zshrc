@@ -69,3 +69,6 @@ alias l='ls -la $LS_OPTIONS'
 alias ll='ls -l $LS_OPTIONS'
 
 fpath=(/usr/local/share/zsh-completions $fpath)
+
+# added by travis gem
+[ -f /Users/owen_ou/.travis/travis.sh ] && source /Users/owen_ou/.travis/travis.sh

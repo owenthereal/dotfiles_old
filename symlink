@@ -66,6 +66,3 @@ ln -s $(pwd)/dart-vim-plugin $(pwd)/.janus/dart-vim-plugin
 
 rm -rf $HOME/.janus/vim-airline
 ln -s $(pwd)/vim-airline $(pwd)/.janus/vim-airline
-
-rm -rf $HOME/.janus/VimClojure
-ln -s $(pwd)/VimClojure $(pwd)/.janus/VimClojure

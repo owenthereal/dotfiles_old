@@ -31,3 +31,6 @@
 [submodule "vim-airline"]
 	path = vim-airline
 	url = git@github.com:bling/vim-airline.git
+[submodule "vim-clojure-static"]
+	path = vim-clojure-static
+	url = git@github.com:guns/vim-clojure-static.git

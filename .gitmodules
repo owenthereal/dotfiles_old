@@ -34,3 +34,12 @@
 [submodule "vim-clojure-static"]
 	path = vim-clojure-static
 	url = git@github.com:guns/vim-clojure-static.git
+[submodule "vim-fireplace"]
+	path = vim-fireplace
+	url = git://github.com/tpope/vim-fireplace.git
+[submodule "vim-classpath"]
+	path = vim-classpath
+	url = git://github.com/tpope/vim-classpath.git
+[submodule "vim-slime"]
+	path = vim-slime
+	url = git@github.com:jpalardy/vim-slime.git

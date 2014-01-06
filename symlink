@@ -66,3 +66,15 @@ ln -s $(pwd)/dart-vim-plugin $(pwd)/.janus/dart-vim-plugin
 
 rm -rf $HOME/.janus/vim-airline
 ln -s $(pwd)/vim-airline $(pwd)/.janus/vim-airline
+
+rm -rf $HOME/.janus/vim-clojure-static
+ln -s $(pwd)/vim-clojure-static $(pwd)/.janus/vim-clojure-static
+
+rm -rf $HOME/.janus/vim-fireplace
+ln -s $(pwd)/vim-fireplace $(pwd)/.janus/vim-fireplace
+
+rm -rf $HOME/.janus/vim-classpath
+ln -s $(pwd)/vim-classpath $(pwd)/.janus/vim-classpath
+
+rm -rf $HOME/.janus/vim-slime
+ln -s $(pwd)/vim-slime $(pwd)/.janus/vim-slime

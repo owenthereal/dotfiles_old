@@ -45,3 +45,5 @@ nnoremap <leader>gr :call VimuxSendKeys("C-c") <CR> :call VimuxRunCommand("clear
 
 autocmd CursorMovedI * if pumvisible() == 0|silent! pclose|endif
 autocmd InsertLeave * if pumvisible() == 0|silent! pclose|endif
+
+let g:slime_target = "tmux"

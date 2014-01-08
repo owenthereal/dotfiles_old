@@ -19,9 +19,6 @@
 [submodule "vimux-ruby-test"]
 	path = vimux-ruby-test
 	url = git://github.com/pgr0ss/vimux-ruby-test.git
-[submodule "vimux-golang"]
-	path = vimux-golang
-	url = git://github.com/benmills/vimux-golang.git
 [submodule "dart-vim-plugin"]
 	path = dart-vim-plugin
 	url = git://github.com/dart-lang/dart-vim-plugin.git

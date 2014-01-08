@@ -61,10 +61,11 @@
   autocorrect = 1
 
 [credential]
-helper = /opt/boxen/bin/boxen-git-credential
+  helper = /opt/boxen/bin/boxen-git-credential
 
 [hub]
-protocol = git
+  protocol = git
 
 [gh]
-protocol = https
+  protocol = https
+  autoUpdate = always

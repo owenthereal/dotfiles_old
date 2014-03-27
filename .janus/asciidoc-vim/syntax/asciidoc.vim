@@ -1,1 +1,1 @@
-/Users/owen_ou/.dotfiles/asciidoc-vim/asciidoc.vim
+/Users/owen/.dotfiles/asciidoc-vim/asciidoc.vim

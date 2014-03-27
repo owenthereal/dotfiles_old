@@ -1,80 +1,50 @@
-#!/usr/bin/env bash
+#!/usr/bin/env ruby
 
-rm -rf $HOME/.zshenv
-ln -s $(pwd)/.zshenv $HOME/.zshenv
+require 'fileutils'
 
-rm -rf $HOME/.zshrc
-ln -s $(pwd)/.zshrc $HOME/.zshrc
+def current_file(*name)
+  pwd = Dir.getwd
+  File.join(pwd, *name)
+end
 
-rm -rf $HOME/.dir_colors
-ln -s $(pwd)/dircolors-solarized/dircolors.256dark $HOME/.dir_colors
+def home_file(*name)
+  File.join(ENV.fetch('HOME'), *name)
+end
 
-rm -f $HOME/.gitconfig
-ln -s $(pwd)/.gitconfig $HOME/.gitconfig
+def symlink(from, to)
+  FileUtils.rm(to)
+  File.symlink(from, to)
+end
 
-rm -f $HOME/.gitignore
-ln -s $(pwd)/.gitignore $HOME/.gitignore
 
-rm -rf $HOME/.vimrc.before
-ln -s $(pwd)/.vimrc.before $HOME/.vimrc.before
+files = {
+  current_file('.zshenv') => home_file('.zshenv'),
+  current_file('.zshrc') => home_file('.zshrc'),
+  current_file('dircolors-solarized', 'dircolors.256dark') => home_file('.dir_colors'),
+  current_file('.gitconfig') => home_file('.gitconfig'),
+  current_file('.gitignore') => home_file('.gitignore'),
+  current_file('.vimrc.before') => home_file('.vimrc.before'),
+  current_file('.vimrc.after') => home_file('.vimrc.after'),
+  current_file('.ackrc') => home_file('.ackrc'),
+  current_file('.tmux.conf') => home_file('.tmux.conf'),
+  current_file('.janus') => home_file('.janus'),
+  current_file('.gemrc') => home_file('.gemrc'),
+  current_file('.emacs.d') => home_file('.emacs.d'),
+  File.join(`go env GOROOT`.strip, 'misc', 'vim') => home_file('.janus', 'go'),
+  current_file('gocode', 'vim') => home_file('.janus', 'gocode'),
+  current_file('lint', 'misc', 'vim') => home_file('.janus', 'golint'),
+  current_file('tabular') => home_file('.janus', 'tabular'),
+  current_file('vimux') => home_file('.janus', 'vimux'),
+  current_file('vimux-ruby-test') => home_file('.janus', 'vimux-ruby-test'),
+  current_file('dart-vim-plugin') => home_file('.janus', 'dart-vim-plugin'),
+  current_file('vim-airline') => home_file('.janus', 'vim-airline'),
+  current_file('vim-clojure-static') => home_file('.janus', 'vim-clojure-static'),
+  current_file('vim-fireplace') => home_file('.janus', 'vim-fireplace'),
+  current_file('vim-classpath') => home_file('.janus', 'vim-classpath'),
+  current_file('vim-slime') => home_file('.janus', 'vim-slime'),
+}
 
-rm -rf $HOME/.vimrc.after
-ln -s $(pwd)/.vimrc.after $HOME/.vimrc.after
-
-rm -rf $HOME/.ackrc
-ln -s $(pwd)/.ackrc $HOME/.ackrc
-
-rm -rf $HOME/.tmux.conf
-ln -s $(pwd)/.tmux.conf $HOME/.tmux.conf
-
-rm -rf $HOME/.janus
-ln -s $(pwd)/.janus $HOME/.janus
-
-rm -rf $HOME/.gemrc
-ln -s $(pwd)/.gemrc $HOME/.gemrc
-
-rm -rf $HOME/.emacs.d
-ln -s $(pwd)/.emacs.d $HOME/.emacs.d
-
-rm -rf $HOME/.janus/go
-ln -s $(go env GOROOT)/misc/vim $HOME/.janus/go
-
-rm -rf $HOME/.janus/gocode
-ln -s $(pwd)/gocode/vim $HOME/.janus/gocode
-
-rm -rf $HOME/.janus/golint
-ln -s $(pwd)/lint/misc/vim $HOME/.janus/golint
-
-rm -rf $HOME/.janus/asciidoc-vim
-mkdir -p $HOME/.janus/asciidoc-vim/syntax
-ln -s $(pwd)/asciidoc-vim/asciidoc.vim $(pwd)/.janus/asciidoc-vim/syntax/asciidoc.vim
-
-rm -rf $HOME/.janus/tabular
-ln -s $(pwd)/tabular $(pwd)/.janus/tabular
-
-rm -rf $HOME/.janus/vimux
-ln -s $(pwd)/vimux $(pwd)/.janus/vimux
-
-rm -rf $HOME/.janus/vimux-ruby-test
-ln -s $(pwd)/vimux-ruby-test $(pwd)/.janus/vimux-ruby-test
-
-rm -rf $HOME/.janus/vimux-golang
-ln -s $(pwd)/vimux-golang $(pwd)/.janus/vimux-golang
-
-rm -rf $HOME/.janus/dart-vim-plugin
-ln -s $(pwd)/dart-vim-plugin $(pwd)/.janus/dart-vim-plugin
-
-rm -rf $HOME/.janus/vim-airline
-ln -s $(pwd)/vim-airline $(pwd)/.janus/vim-airline
-
-rm -rf $HOME/.janus/vim-clojure-static
-ln -s $(pwd)/vim-clojure-static $(pwd)/.janus/vim-clojure-static
-
-rm -rf $HOME/.janus/vim-fireplace
-ln -s $(pwd)/vim-fireplace $(pwd)/.janus/vim-fireplace
-
-rm -rf $HOME/.janus/vim-classpath
-ln -s $(pwd)/vim-classpath $(pwd)/.janus/vim-classpath
-
-rm -rf $HOME/.janus/vim-slime
-ln -s $(pwd)/vim-slime $(pwd)/.janus/vim-slime
+files.each do |from, to|
+  puts "#{from} => #{to}"
+  symlink(from, to)
+end

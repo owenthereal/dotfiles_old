@@ -1,9 +1,6 @@
 [submodule "dircolors-solarized"]
   path = dircolors-solarized
   url = git://github.com/seebi/dircolors-solarized.git
-[submodule "asciidoc-vim"]
-  path = asciidoc-vim
-  url = git://github.com/dagwieers/asciidoc-vim.git
 [submodule "gocode"]
 	path = gocode
 	url = git://github.com/nsf/gocode.git

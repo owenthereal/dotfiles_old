@@ -16,7 +16,6 @@ def symlink(from, to)
   File.symlink(from, to)
 end
 
-
 files = {
   current_file('.zshenv') => home_file('.zshenv'),
   current_file('.zshrc') => home_file('.zshrc'),
@@ -47,4 +46,18 @@ files = {
 files.each do |from, to|
   puts "#{from} => #{to}"
   symlink(from, to)
+end
+
+puts
+
+go_packs = [
+  'github.com/nsf/gocode',
+  'github.com/tools/godep',
+  'code.google.com/p/go.tools/cmd/goimports'
+]
+
+go_packs.each do |go_pack|
+  cmd = "go get -u #{go_pack}"
+  puts cmd
+  `#{cmd}`
 end

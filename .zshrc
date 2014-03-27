@@ -44,6 +44,7 @@ export JRUBY_OPTS=--1.9
 export SBT_OPTS="-XX:+CMSClassUnloadingEnabled -XX:MaxPermSize=256M"
 export GOPATH=$HOME/gocode
 export DART_FLAGS='--enable_type_checks --enable_asserts'
+export DOCKER_HOST=tcp://localhost:4243
 
 export PATH=$GOPATH/bin:$PATH
 

@@ -12,7 +12,7 @@ def home_file(*name)
 end
 
 def symlink(from, to)
-  FileUtils.rm(to)
+  FileUtils.rm_rf(to)
   File.symlink(from, to)
 end
 

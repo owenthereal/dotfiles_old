@@ -34,3 +34,6 @@
 [submodule "vim-slime"]
 	path = vim-slime
 	url = git@github.com:jpalardy/vim-slime.git
+[submodule "z"]
+	path = z
+	url = https://github.com/rupa/z.git

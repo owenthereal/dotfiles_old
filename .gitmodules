@@ -28,3 +28,6 @@
 [submodule "z"]
 	path = z
 	url = https://github.com/rupa/z.git
+[submodule "vim-go"]
+	path = vim-go
+	url = git@github.com:fatih/vim-go.git

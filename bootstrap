@@ -29,8 +29,7 @@ files = {
   current_file('.janus') => home_file('.janus'),
   current_file('.gemrc') => home_file('.gemrc'),
   current_file('.emacs.d') => home_file('.emacs.d'),
-  File.join(`go env GOROOT`.strip, 'misc', 'vim') => home_file('.janus', 'go'),
-  current_file('gocode', 'vim') => home_file('.janus', 'gocode'),
+  current_file('vim-go') => home_file('.janus', 'vim-go'),
   current_file('lint', 'misc', 'vim') => home_file('.janus', 'golint'),
   current_file('tabular') => home_file('.janus', 'tabular'),
   current_file('vimux') => home_file('.janus', 'vimux'),
@@ -48,9 +47,7 @@ end
 puts
 
 go_packs = [
-  'github.com/nsf/gocode',
   'github.com/tools/godep',
-  'code.google.com/p/go.tools/cmd/goimports'
 ]
 
 go_packs.each do |go_pack|

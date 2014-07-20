@@ -31,3 +31,6 @@
 [submodule "vim-go"]
 	path = vim-go
 	url = git@github.com:fatih/vim-go.git
+[submodule "vim-gradle"]
+	path = vim-gradle
+	url = https://github.com/tfnico/vim-gradle

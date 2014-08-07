@@ -46,7 +46,7 @@ export GOPATH=$HOME/gocode
 export DART_FLAGS='--enable_type_checks --enable_asserts'
 export DOCKER_HOST=tcp://localhost:4243
 
-export PATH=$GOPATH/bin:$PATH
+export PATH=$GOPATH/bin:$JAVA_HOME/bin:$PATH
 
 [ -f /opt/boxen/env.sh ] && source /opt/boxen/env.sh
 

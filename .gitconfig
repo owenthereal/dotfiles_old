@@ -18,6 +18,7 @@
   current-branch = !git symbolic-ref -q HEAD | sed -e 's|^refs/heads/||'
   track = checkout -t
   who = shortlog -s --
+	dag = log --graph --format='format:%C(yellow)%h%C(reset) %C(blue)\"%an\" <%ae>%C(reset) %C(magenta)%cr%C(reset)%C(auto)%d%C(reset)%n%s' --date-order
 [status]
   submodule = 1
 [push]
@@ -45,7 +46,7 @@
 [core]
   pager = less -FRSX
   whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol
-  excludesfile = /opt/boxen/config/git/gitignore
+  excludesfile = ~/.gitignore
   editor = vim
 [apply]
   whitespace = warn
@@ -68,3 +69,5 @@
 
 [gh]
   protocol = https
+[amazon]
+	append-cr-url = true

@@ -49,3 +49,4 @@ autocmd CursorMovedI * if pumvisible() == 0|silent! pclose|endif
 autocmd InsertLeave * if pumvisible() == 0|silent! pclose|endif
 
 let g:slime_target = "tmux"
+let g:tagbar_ctags_bin = substitute(system("echo $(brew --prefix)/bin/ctags"), '[\]\|[[:cntrl:]]', '', 'g')

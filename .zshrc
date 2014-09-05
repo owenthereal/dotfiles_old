@@ -74,3 +74,6 @@ fpath=(/usr/local/share/zsh-completions $fpath)
 
 # added by travis gem
 [ -f $HOME/.travis/travis.sh ] && source $HOME/.travis/travis.sh
+
+# custom
+[ -f $HOME/.custom.sh ] && source $HOME/.custom.sh

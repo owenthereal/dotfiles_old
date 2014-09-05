@@ -30,7 +30,6 @@ files = {
   current_file('.gemrc') => home_file('.gemrc'),
   current_file('.emacs.d') => home_file('.emacs.d'),
   current_file('vim-go') => home_file('.janus', 'vim-go'),
-  current_file('lint', 'misc', 'vim') => home_file('.janus', 'golint'),
   current_file('tabular') => home_file('.janus', 'tabular'),
   current_file('vimux') => home_file('.janus', 'vimux'),
   current_file('vimux-ruby-test') => home_file('.janus', 'vimux-ruby-test'),

@@ -33,6 +33,8 @@ plugins=(git osx brew gem lein mvim rake sublime bundler golang)
 
 source $ZSH/oh-my-zsh.sh
 
+[ -f /opt/boxen/env.sh ] && source /opt/boxen/env.sh
+
 export EDITOR=vim
 
 export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:$PATH
@@ -43,14 +45,11 @@ export JAVA_OPTS="-Xmx1024m"
 export JRUBY_OPTS=--1.9
 export SBT_OPTS="-XX:+CMSClassUnloadingEnabled -XX:MaxPermSize=256M"
 export GOPATH=$HOME/gocode
+export GOROOT=$(brew --prefix go)/libexec
 export DART_FLAGS='--enable_type_checks --enable_asserts'
 export DOCKER_HOST=tcp://localhost:4243
 
 export PATH=$GOPATH/bin:$JAVA_HOME/bin:/apollo/env/SDETools/bin:$PATH
-
-[ -f /opt/boxen/env.sh ] && source /opt/boxen/env.sh
-
-export PATH=$GOPATH/bin:$PATH
 
 # Customize to your needs...
 unsetopt correct_all

@@ -37,7 +37,7 @@ nnoremap <Leader>ra :RunAllRubyTests<CR>
 nnoremap <Leader>rg :ZeusConsole<CR>
 nnoremap <Leader>rr :ZeusRake<CR>
 
-nnoremap <Leader>gf :Fmt<CR> :w<CR>
+nnoremap <Leader>gf :GoFmt<CR> :w<CR>
 nnoremap <Leader>ga :wa<CR> :call VimuxRunCommand("clear; go fmt ./...")<CR>
 "nnoremap <Leader>gt :wa<CR> :call VimuxRunCommand("clear; [ -f script/test ] && script/test \|\| go test ./...")<CR>
 nnoremap <Leader>gt :wa<CR> :call VimuxRunCommand("clear; go test ./...")<CR>

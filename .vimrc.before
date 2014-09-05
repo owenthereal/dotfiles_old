@@ -1,2 +1,4 @@
 let mapleader = ","
 let maplocalleader = "\\"
+
+call janus#disable_plugin("golang", "Use vim-go instead")

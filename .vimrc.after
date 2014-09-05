@@ -49,4 +49,3 @@ autocmd CursorMovedI * if pumvisible() == 0|silent! pclose|endif
 autocmd InsertLeave * if pumvisible() == 0|silent! pclose|endif
 
 let g:slime_target = "tmux"
-let g:gofmt_command = "goimports"

@@ -49,7 +49,7 @@ export GOROOT=$(go env GOROOT)
 export DART_FLAGS='--enable_type_checks --enable_asserts'
 export DOCKER_HOST=tcp://localhost:4243
 
-export PATH=$GOPATH/bin:$GOROOT/bin:$HOME/.vim-go:$JAVA_HOME/bin:/apollo/env/SDETools/bin:$PATH
+export PATH=$GOPATH/bin:$GOROOT/bin:$HOME/.vim-go:$JAVA_HOME/bin:$PATH
 
 # Customize to your needs...
 unsetopt correct_all

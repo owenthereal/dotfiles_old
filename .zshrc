@@ -68,7 +68,7 @@ alias lsa='ls -lah $LS_OPTIONS'
 alias l='ls -la $LS_OPTIONS'
 alias ll='ls -l $LS_OPTIONS'
 
-fpath=(/usr/local/share/zsh-completions $fpath)
+fpath=($(brew --prefix)/share/zsh-completions $fpath)
 
 [ -f $HOME/.dotfiles/z/z.sh ] && . $HOME/.dotfiles/z/z.sh
 

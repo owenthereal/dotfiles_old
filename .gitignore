@@ -10,15 +10,6 @@
 .emacs.d/url
 \#*#
 
-# Compiled source #
-###################
-*.com
-*.class
-*.dll
-*.exe
-*.o
-*.so
-
 # Packages #
 ############
 # it's better to unpack these files and commit the raw source

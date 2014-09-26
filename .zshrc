@@ -67,6 +67,7 @@ export LS_OPTIONS='--color'
 alias lsa='ls -lah $LS_OPTIONS'
 alias l='ls -la $LS_OPTIONS'
 alias ll='ls -l $LS_OPTIONS'
+alias eclipse='/Applications/eclipse/eclipse > /dev/null 2>&1 &'
 
 fpath=($(brew --prefix)/share/zsh-completions $fpath)
 

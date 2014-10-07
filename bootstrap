@@ -19,6 +19,7 @@ end
 files = {
   current_file('.zshenv') => home_file('.zshenv'),
   current_file('.zshrc') => home_file('.zshrc'),
+  current_file('jenv') => home_file('.jenv'),
   current_file('dircolors-solarized', 'dircolors.256dark') => home_file('.dir_colors'),
   current_file('.gitconfig') => home_file('.gitconfig'),
   current_file('.gitignore') => home_file('.gitignore'),

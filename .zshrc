@@ -39,7 +39,12 @@ export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:$PATH
 
 export EDITOR=vim
 
+export PATH=$GOPATH/bin:$GOROOT/bin:$HOME/.vim-go:$HOME/.jenv/bin:$PATH
+
+eval "$(jenv init -)"
+
 # Environment variables
+export JAVA_HOME=$(jenv javahome)
 export JAVA_OPTS="-Xmx1024m"
 export JRUBY_OPTS=--1.9
 export SBT_OPTS="-XX:+CMSClassUnloadingEnabled -XX:MaxPermSize=256M"
@@ -47,8 +52,6 @@ export GOPATH=$HOME/gocode
 export GOROOT=$(go env GOROOT)
 export DART_FLAGS='--enable_type_checks --enable_asserts'
 export DOCKER_HOST=tcp://localhost:4243
-
-export PATH=$GOPATH/bin:$GOROOT/bin:$HOME/.vim-go:$HOME/.jenv/bin:$PATH
 
 # Customize to your needs...
 unsetopt correct_all
@@ -70,8 +73,6 @@ alias vi='vim'
 alias eclipse='/Applications/eclipse/eclipse > /dev/null 2>&1 &'
 
 fpath=($(brew --prefix)/share/zsh-completions $fpath)
-
-eval "$(jenv init -)"
 
 [ -f $HOME/.dotfiles/z/z.sh ] && . $HOME/.dotfiles/z/z.sh
 

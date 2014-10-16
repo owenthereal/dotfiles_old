@@ -39,26 +39,28 @@ export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:$PATH
 
 export EDITOR=vim
 
-export PATH=$GOPATH/bin:$GOROOT/bin:$HOME/.vim-go:$HOME/.jenv/bin:$PATH
+# Go Env
+export GOPATH=$HOME/gocode
+export GOROOT=$(go env GOROOT)
+export PATH=$GOPATH/bin:$GOROOT/bin:$HOME/.vim-go:$PATH
 
+# Java Env
+export PATH=$HOME/.jenv/bin:$PATH
 eval "$(jenv init -)"
-
-# Environment variables
 export JAVA_HOME=$(jenv javahome)
 export JAVA_OPTS="-Xmx1024m"
 export JRUBY_OPTS=--1.9
 export SBT_OPTS="-XX:+CMSClassUnloadingEnabled -XX:MaxPermSize=256M"
-export GOPATH=$HOME/gocode
-export GOROOT=$(go env GOROOT)
+
+# Other Env
 export DART_FLAGS='--enable_type_checks --enable_asserts'
 export DOCKER_HOST=tcp://localhost:4243
-
-# Customize to your needs...
-unsetopt correct_all
-
 export PATH=$(brew --prefix coreutils)/libexec/gnubin:/usr/local/bin:/usr/local/sbin:$PATH
 export PATH=$HOME/.dotfiles/depot_tools:$PATH
 export PATH=$HOME/bin:/Applications/dart/dart-sdk/bin:/Applications/dart/Chromium.app/Contents/MacOS:$PATH
+
+# Customize to your needs...
+unsetopt correct_all
 
 # Enable color for ls
 eval $(dircolors ~/.dir_colors)

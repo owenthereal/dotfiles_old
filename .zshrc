@@ -57,7 +57,7 @@ export DOCKER_HOST=tcp://localhost:4243
 unsetopt correct_all
 
 export PATH=$(brew --prefix coreutils)/libexec/gnubin:/usr/local/bin:/usr/local/sbin:$PATH
-export PATH=$HOME/.dotfiles/depot_tools:/usr/local/share/npm/bin:$PATH
+export PATH=$HOME/.dotfiles/depot_tools:$PATH
 export PATH=$HOME/bin:/Applications/dart/dart-sdk/bin:/Applications/dart/Chromium.app/Contents/MacOS:$PATH
 
 # Enable color for ls

@@ -33,6 +33,8 @@ plugins=(git osx brew gem lein mvim rake sublime bundler golang)
 
 source $ZSH/oh-my-zsh.sh
 
+export PS1="🚀  $PS1"
+
 export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:$PATH
 
 [ -f /opt/boxen/env.sh ] && source /opt/boxen/env.sh

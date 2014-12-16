@@ -43,8 +43,7 @@ export EDITOR=vim
 
 # Go Env
 export GOPATH=$HOME/gocode
-export GOROOT=$(go env GOROOT)
-export PATH=$GOPATH/bin:$GOROOT/bin:$HOME/.vim-go:$PATH
+export PATH=$GOPATH/bin:$HOME/.vim-go:$PATH
 
 # Java Env
 export PATH=$HOME/.jenv/bin:$PATH

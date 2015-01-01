@@ -9,12 +9,14 @@ endif
 syntax on
 filetype plugin indent on
 filetype plugin on
-set background=dark
-colorscheme solarized
 
+set clipboard=unnamed
 set cursorline
 set tags+=gems.tags
 set spell
+
+set background=dark
+colorscheme solarized
 
 cmap w!! %!sudo tee > /dev/null %
 

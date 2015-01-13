@@ -51,7 +51,7 @@ eval "$(jenv init -)"
 export JAVA_HOME=$(jenv javahome)
 export JAVA_OPTS="-Xmx1024m"
 export JRUBY_OPTS=--1.9
-export SBT_OPTS="-XX:+CMSClassUnloadingEnabled -XX:MaxPermSize=256M"
+export SBT_OPTS="-XX:+CMSClassUnloadingEnabled"
 
 # Other Env
 export DART_FLAGS='--enable_type_checks --enable_asserts'

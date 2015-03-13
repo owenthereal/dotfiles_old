@@ -84,3 +84,9 @@ fpath=($(brew --prefix)/share/zsh-completions $fpath)
 
 # custom
 [ -f $HOME/.custom.sh ] && source $HOME/.custom.sh
+
+# The next line updates PATH for the Google Cloud SDK.
+[ -f $HOME/bin/google-cloud-sdk/path.zsh.inc ] && source $HOME/bin/google-cloud-sdk/path.zsh.inc
+
+# The next line enables bash completion for gcloud.
+[ -f $HOME/bin/google-cloud-sdk/completion.zsh.inc ] && source $HOME/bin/google-cloud-sdk/completion.zsh.inc

@@ -53,6 +53,9 @@ export JAVA_OPTS="-Xmx1024m"
 export JRUBY_OPTS=--1.9
 export SBT_OPTS="-XX:+CMSClassUnloadingEnabled"
 
+# Ruby env
+export RI="--format ansi --width 70"
+
 # Other Env
 export DART_FLAGS='--enable_type_checks --enable_asserts'
 export DOCKER_HOST=tcp://localhost:4243

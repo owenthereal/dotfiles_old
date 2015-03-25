@@ -27,6 +27,7 @@ files = {
   current_file('.vimrc.after') => home_file('.vimrc.after'),
   current_file('.ackrc') => home_file('.ackrc'),
   current_file('.irbrc') => home_file('.irbrc'),
+  current_file('.psqlrc') => home_file('.psqlrc'),
   current_file('.tmux.conf') => home_file('.tmux.conf'),
   current_file('.janus') => home_file('.janus'),
   current_file('.gemrc') => home_file('.gemrc'),

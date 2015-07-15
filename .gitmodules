@@ -37,6 +37,3 @@
 [submodule "vim-dispatch"]
 	path = vim-dispatch
 	url = git@github.com:tpope/vim-dispatch.git
-[submodule "jenv"]
-	path = jenv
-	url = https://github.com/gcuisinier/jenv

@@ -46,9 +46,7 @@ export GOPATH=$HOME/gocode
 export PATH=$GOPATH/bin:$HOME/.vim-go:$PATH
 
 # Java Env
-export PATH=$HOME/.jenv/bin:$PATH
-eval "$(jenv init -)"
-export JAVA_HOME=$(jenv javahome)
+export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
 export JAVA_OPTS="-Xmx1024m"
 export JRUBY_OPTS=--1.9
 export SBT_OPTS="-XX:+CMSClassUnloadingEnabled"

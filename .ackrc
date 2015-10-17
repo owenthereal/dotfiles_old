@@ -8,6 +8,7 @@
 --type-set=clojure=.clj
 --type-set=java=.java
 --type-set=go=.go
+--type-set=elixir=.ex,.exs
 
 --ignore-dir=log
 --ignore-dir=backups
@@ -35,3 +36,4 @@
 --clojure
 --java
 --go
+--elixir

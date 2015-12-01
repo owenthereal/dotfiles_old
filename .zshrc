@@ -75,6 +75,7 @@ alias l='ls -la $LS_OPTIONS'
 alias ll='ls -l $LS_OPTIONS'
 alias vi='vim'
 alias eclipse='/Applications/eclipse/eclipse > /dev/null 2>&1 &'
+alias cat=ccat
 
 fpath=($(brew --prefix)/share/zsh-completions $fpath)
 

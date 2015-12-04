@@ -76,6 +76,7 @@ alias ll='ls -l $LS_OPTIONS'
 alias vi='vim'
 alias eclipse='/Applications/eclipse/eclipse > /dev/null 2>&1 &'
 alias cat=ccat
+alias less='function __cless() { ccat --color=always $* | less }; __cless'
 
 fpath=($(brew --prefix)/share/zsh-completions $fpath)
 

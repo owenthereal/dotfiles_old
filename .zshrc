@@ -56,7 +56,6 @@ export RI="--format ansi --width 70"
 
 # Other Env
 export DART_FLAGS='--enable_type_checks --enable_asserts'
-export DOCKER_HOST=tcp://localhost:4243
 export PATH=$(brew --prefix coreutils)/libexec/gnubin:/usr/local/bin:/usr/local/sbin:$PATH
 export PATH=$HOME/.dotfiles/depot_tools:$PATH
 export PATH=$HOME/bin:/Applications/dart/dart-sdk/bin:/Applications/dart/Chromium.app/Contents/MacOS:$PATH

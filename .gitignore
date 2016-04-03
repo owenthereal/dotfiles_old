@@ -1,3 +1,7 @@
+# vim #
+
+*.swp
+
 # Emacs #
 ###################
 .emacs.d/auto-save-list

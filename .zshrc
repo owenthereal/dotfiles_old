@@ -50,6 +50,7 @@ export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
 export JAVA_OPTS="-Xmx1024m"
 export JRUBY_OPTS=--1.9
 export SBT_OPTS="-XX:+CMSClassUnloadingEnabled"
+export ANDROID_HOME=$(brew --prefix)/opt/android-sdk
 
 # Ruby env
 export RI="--format ansi --width 70"

@@ -71,3 +71,5 @@
   protocol = https
 [amazon]
 	append-cr-url = true
+[merge]
+	tool = opendiff

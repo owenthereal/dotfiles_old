@@ -92,3 +92,6 @@ fpath=($(brew --prefix)/share/zsh-completions $fpath)
 
 # The next line enables bash completion for gcloud.
 [ -f $HOME/bin/google-cloud-sdk/completion.zsh.inc ] && source $HOME/bin/google-cloud-sdk/completion.zsh.inc
+
+# added by travis gem
+[ -f $HOME/.travis/travis.sh ] && source $HOME/.travis/travis.sh

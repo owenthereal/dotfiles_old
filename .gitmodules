@@ -46,3 +46,6 @@
 [submodule "rust.vim"]
 	path = rust.vim
 	url = https://github.com/rust-lang/rust.vim
+[submodule "webapi-vim"]
+	path = webapi-vim
+	url = https://github.com/mattn/webapi-vim

@@ -43,7 +43,7 @@ export EDITOR=vim
 
 # Go Env
 export GOPATH=$HOME/gocode
-export PATH=$GOPATH/bin:$HOME/.vim-go:$PATH
+export PATH=$GOPATH/bin:$HOME/.cargo/bin:$HOME/.vim-go:$PATH
 
 # Java Env
 export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)

@@ -43,7 +43,12 @@ files = {
   current_file('vim-gradle') => home_file('.janus', 'vim-gradle'),
   current_file('vim-dispatch') => home_file('.janus', 'vim-dispatch'),
   current_file('vim-jsx') => home_file('.janus', 'vim-jsx'),
+<<<<<<< c8c69ee6b8822de054d2c2f6e3f9cc11baa54189
   current_file('rust.vim') => home_file('.janus', 'rust.vim')
+=======
+  current_file('rust.vim') => home_file('.janus', 'rust.vim'),
+  current_file('webapi-vim') => home_file('.janus', 'webapi-vim')
+>>>>>>> Bump deps
 }
 
 files.each do |from, to|

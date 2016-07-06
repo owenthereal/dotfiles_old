@@ -74,8 +74,16 @@ alias lsa='ls -lah $LS_OPTIONS'
 alias l='ls -la $LS_OPTIONS'
 alias ll='ls -l $LS_OPTIONS'
 alias vi='vim'
+alias svi='sudo vi'
 alias eclipse='/Applications/eclipse/eclipse > /dev/null 2>&1 &'
-alias cat=ccat
+alias cat='ccat'
+alias c='clear'
+alias h='history'
+alias j='jobs -l'
+alias path='echo -e ${PATH//:/\\n}'
+alias now='date +"%T"'
+alias df='df -H'
+alias du='du -ch'
 
 fpath=($(brew --prefix)/share/zsh-completions $fpath)
 

@@ -86,15 +86,10 @@ alias now='date +"%T"'
 alias df='df -H'
 alias du='du -ch'
 
-fpath=($(brew --prefix)/share/zsh-completions $fpath)
-
 [ -f $HOME/.dotfiles/z/z.sh ] && . $HOME/.dotfiles/z/z.sh
 
 # added by travis gem
 [ -f $HOME/.travis/travis.sh ] && source $HOME/.travis/travis.sh
-
-# custom
-[ -f $HOME/.custom.sh ] && source $HOME/.custom.sh
 
 # The next line updates PATH for the Google Cloud SDK.
 [ -f $HOME/bin/google-cloud-sdk/path.zsh.inc ] && source $HOME/bin/google-cloud-sdk/path.zsh.inc
@@ -102,5 +97,12 @@ fpath=($(brew --prefix)/share/zsh-completions $fpath)
 # The next line enables bash completion for gcloud.
 [ -f $HOME/bin/google-cloud-sdk/completion.zsh.inc ] && source $HOME/bin/google-cloud-sdk/completion.zsh.inc
 
-# added by travis gem
-[ -f $HOME/.travis/travis.sh ] && source $HOME/.travis/travis.sh
+# zsh
+
+fpath=($(brew --prefix)/share/zsh-completions $fpath)
+[ -f $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh ] && source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+[ -f $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ] && source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# custom
+[ -f $HOME/.custom.sh ] && source $HOME/.custom.sh
+

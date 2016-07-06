@@ -15,7 +15,7 @@ set cursorline
 set tags+=gems.tags
 set spell
 
-set background=light
+set background=dark
 colorscheme solarized
 
 cmap w!! %!sudo tee > /dev/null %

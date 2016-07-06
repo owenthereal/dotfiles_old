@@ -40,7 +40,7 @@ export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:$PATH
 [ -f /opt/boxen/env.sh ] && source /opt/boxen/env.sh
 
 export EDITOR=vim
-export TERM=screen-256color
+export TERM=xterm-256color
 
 # Go Env
 export GOPATH=$HOME/gocode

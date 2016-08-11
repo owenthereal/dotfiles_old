@@ -43,13 +43,20 @@ files = {
   current_file('vim-dispatch') => home_file('.janus', 'vim-dispatch'),
   current_file('vim-jsx') => home_file('.janus', 'vim-jsx'),
   current_file('rust.vim') => home_file('.janus', 'rust.vim'),
-  current_file('webapi-vim') => home_file('.janus', 'webapi-vim')
+  current_file('webapi-vim') => home_file('.janus', 'webapi-vim'),
+  current_file('vimshell.vim') => home_file('.janus', 'vimshell.vim'),
+  current_file('vimproc.vim') => home_file('.janus', 'vimproc.vim'),
+  current_file('unite.vim') => home_file('.janus', 'unite.vim'),
 }
 
 files.each do |from, to|
   puts "#{from} => #{to}"
   symlink(from, to)
 end
+
+puts
+
+puts `cd ./vimproc.vim && make clean all`
 
 puts
 

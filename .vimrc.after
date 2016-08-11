@@ -64,6 +64,8 @@ let g:tagbar_ctags_bin = substitute(system("echo $(brew --prefix)/bin/ctags"), '
 let g:jsx_ext_required = 0
 let g:rustfmt_autosave = 1
 
+let g:airline_section_b = '%f'
+
 let g:vimshell_user_prompt = 'fnamemodify(getcwd(), ":~")'
 let g:vimshell_prompt = '$ '
 let g:vimshell_split_command = 'split'

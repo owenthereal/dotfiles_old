@@ -49,3 +49,12 @@
 [submodule "webapi-vim"]
 	path = webapi-vim
 	url = https://github.com/mattn/webapi-vim
+[submodule "vimshell.vim"]
+	path = vimshell.vim
+	url = https://github.com/Shougo/vimshell.vim
+[submodule "vimproc.vim"]
+	path = vimproc.vim
+	url = https://github.com/Shougo/vimproc.vim
+[submodule "unite.vim"]
+	path = unite.vim
+	url = https://github.com/shougo/unite.vim

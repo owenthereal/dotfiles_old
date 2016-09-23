@@ -16,7 +16,7 @@ set tags+=gems.tags
 set spell
 
 set background=dark
-colorscheme solarized
+colorscheme ir_black
 
 cmap w!! %!sudo tee > /dev/null %
 

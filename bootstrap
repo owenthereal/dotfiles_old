@@ -61,7 +61,8 @@ puts `cd ./vimproc.vim && make clean all`
 puts
 
 go_packs = [
-  'github.com/tools/godep',
+  'github.com/kardianos/govendor',
+  'github.com/nsf/gocode',
   'github.com/jingweno/odt',
 ]
 

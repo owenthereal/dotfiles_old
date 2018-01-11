@@ -2,6 +2,7 @@
 --type-add=html=.html.erb,.html.haml,.jst.hamlc
 --type-add=js=.js.erb,.coffee,.js.coffee,.ejs
 --type-add=css=.sass,.less
+--type-add=yaml=.yaml,.yml
 
 --type-set=markdown=.markdown,.md,.mdown
 --type-set=cucumber=.feature

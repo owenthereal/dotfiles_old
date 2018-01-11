@@ -1,1 +1,9 @@
-gem: --no-ri --no-rdoc
+---
+:backtrace: false
+:bulk_threshold: 1000
+:sources:
+- https://rubygems.org/
+- https://1929a211b0d143b0466d8e80c636cbfc42d3452cde7b81e1:@packagecloud.io/heroku/gemgate/
+:update_sources: true
+:verbose: true
+gem: "--no-ri --no-rdoc"

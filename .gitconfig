@@ -61,8 +61,8 @@
 [help]
   autocorrect = 1
 
-[credential]
-  helper = /opt/boxen/bin/boxen-git-credential
+;[credential]
+	;helper = /opt/boxen/bin/boxen-git-credential
 
 [hub]
   protocol = https

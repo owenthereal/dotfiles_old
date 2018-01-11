@@ -85,6 +85,7 @@ alias path='echo -e ${PATH//:/\\n}'
 alias now='date +"%T"'
 alias df='df -H'
 alias du='du -ch'
+alias k='kubectl'
 
 man() {
   env \
@@ -103,24 +104,17 @@ man() {
 # added by travis gem
 [ -f $HOME/.travis/travis.sh ] && source $HOME/.travis/travis.sh
 
-# The next line updates PATH for the Google Cloud SDK.
-[ -f $HOME/bin/google-cloud-sdk/path.zsh.inc ] && source $HOME/bin/google-cloud-sdk/path.zsh.inc
-
-# The next line enables bash completion for gcloud.
-[ -f $HOME/bin/google-cloud-sdk/completion.zsh.inc ] && source $HOME/bin/google-cloud-sdk/completion.zsh.inc
-
 # zsh
 
-fpath=($(brew --prefix)/share/zsh-completions $fpath)
-[ -f $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh ] && source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-[ -f $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ] && source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+#fpath=($(brew --prefix)/share/zsh-completions $fpath)
+#[ -f $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh ] && source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+#[ -f $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ] && source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # custom
 [ -f $HOME/.custom.sh ] && source $HOME/.custom.sh
 
-
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '$HOME/bin/google-cloud-sdk/path.zsh.inc' ]; then source '$HOME/bin/google-cloud-sdk/path.zsh.inc'; fi
+if [ -f "$HOME/bin/google-cloud-sdk/path.zsh.inc" ]; then source "$HOME/bin/google-cloud-sdk/path.zsh.inc"; fi
 
 # The next line enables shell command completion for gcloud.
-if [ -f '$HOME/bin/google-cloud-sdk/completion.zsh.inc' ]; then source '$HOME/bin/google-cloud-sdk/completion.zsh.inc'; fi
+if [ -f "$HOME/bin/google-cloud-sdk/completion.zsh.inc" ]; then source "$HOME/bin/google-cloud-sdk/completion.zsh.inc"; fi

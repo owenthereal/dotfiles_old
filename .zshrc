@@ -29,7 +29,7 @@ ZSH_THEME="robbyrussell"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git github golang osx brew gem lein mvim rake sublime bundler golang)
+plugins=(git github osx brew gem lein mvim rake sublime bundler golang z hub)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -37,7 +37,7 @@ export PS1="🚀  $PS1"
 
 export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:$PATH
 
-[ -f /opt/boxen/env.sh ] && source /opt/boxen/env.sh
+export SHELL=$(brew --prefix)/bin/zsh
 
 export EDITOR=vim
 export TERM=xterm-256color
@@ -47,10 +47,8 @@ export GOPATH=$HOME/gocode
 export PATH=$GOPATH/bin:$HOME/.cargo/bin:$HOME/.vim-go:$PATH
 
 # Java Env
-export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
+export JAVA_HOME=$(/usr/libexec/java_home -v 9)
 export JAVA_OPTS="-Xmx1024m"
-export JRUBY_OPTS=--1.9
-export SBT_OPTS="-XX:+CMSClassUnloadingEnabled"
 export ANDROID_HOME=$(brew --prefix)/opt/android-sdk
 
 # Ruby env
@@ -66,11 +64,11 @@ export PATH=$HOME/bin:/Applications/dart/dart-sdk/bin:/Applications/dart/Chromiu
 unsetopt correct_all
 
 # Enable color for ls
-eval $(dircolors ~/.dir_colors)
+#eval $(dircolors ~/.dir_colors)
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 
 # List direcory contents
-export LS_OPTIONS='--color'
+#export LS_OPTIONS='--color'
 alias lsa='ls -lah $LS_OPTIONS'
 alias l='ls -la $LS_OPTIONS'
 alias ll='ls -l $LS_OPTIONS'
@@ -99,22 +97,42 @@ man() {
     man "$@"
 }
 
-[ -f $HOME/.dotfiles/z/z.sh ] && . $HOME/.dotfiles/z/z.sh
-
-# added by travis gem
-[ -f $HOME/.travis/travis.sh ] && source $HOME/.travis/travis.sh
-
 # zsh
 
-#fpath=($(brew --prefix)/share/zsh-completions $fpath)
-#[ -f $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh ] && source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-#[ -f $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ] && source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+fpath=($(brew --prefix)/share/zsh-completions $fpath)
+[ -f $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh ] && source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+[ -f $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ] && source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+eval "$(rbenv init -)"
+eval "$(nodenv init -)"
+
+# Heroku
+
+alias h="heroku"
+alias hs="heroku sudo --reason reasons"
+alias ic="ion-client"
+alias debug="heroku_debug"
+
+export ION_USER=owen.o
+
+cloud() {
+  eval "$(ion-client shell)"
+  cloud "$@"
+}
+
+heroku_debug() {
+  set -xg HEROKU_DEBUG 1
+  set -xg HEROKU_DEBUG_HEADERS 1
+  eval $argv
+  set -e HEROKU_DEBUG
+  set -e HEROKU_DEBUG_HEADERS
+}
+
+heroku_cloud_display() {
+  if [[ ${HEROKU_CLOUD} != 'production' && ${HEROKU_CLOUD} != '' ]]; then
+    echo "%{$fg[blue]%}[%{$fg[cyan]%}${HEROKU_CLOUD:u}%{$fg[blue]%}] "
+  fi
+}
 
 # custom
 [ -f $HOME/.custom.sh ] && source $HOME/.custom.sh
-
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f "$HOME/bin/google-cloud-sdk/path.zsh.inc" ]; then source "$HOME/bin/google-cloud-sdk/path.zsh.inc"; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f "$HOME/bin/google-cloud-sdk/completion.zsh.inc" ]; then source "$HOME/bin/google-cloud-sdk/completion.zsh.inc"; fi

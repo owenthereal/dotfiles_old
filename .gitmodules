@@ -10,51 +10,15 @@
 [submodule "vimux"]
 	path = vimux
 	url = git://github.com/benmills/vimux.git
-[submodule "vimux-ruby-test"]
-	path = vimux-ruby-test
-	url = git://github.com/pgr0ss/vimux-ruby-test.git
 [submodule "dart-vim-plugin"]
 	path = dart-vim-plugin
 	url = git://github.com/dart-lang/dart-vim-plugin.git
-[submodule "lint"]
-	path = lint
-	url = git@github.com:golang/lint.git
-[submodule "vim-airline"]
-	path = vim-airline
-	url = git@github.com:bling/vim-airline.git
-[submodule "vim-fireplace"]
-	path = vim-fireplace
-	url = git://github.com/tpope/vim-fireplace.git
-[submodule "z"]
-	path = z
-	url = https://github.com/rupa/z.git
 [submodule "vim-go"]
 	path = vim-go
-	url = git@github.com:fatih/vim-go.git
-[submodule "vim-gradle"]
-	path = vim-gradle
-	url = https://github.com/tfnico/vim-gradle
-[submodule "vim-dispatch"]
-	path = vim-dispatch
-	url = git@github.com:tpope/vim-dispatch.git
+	url = https://github.com/fatih/vim-go
 [submodule "vim-jsx"]
 	path = vim-jsx
 	url = https://github.com/mxw/vim-jsx
-[submodule "vim-airline-themes"]
-	path = vim-airline-themes
-	url = https://github.com/vim-airline/vim-airline-themes
 [submodule "rust.vim"]
 	path = rust.vim
 	url = https://github.com/rust-lang/rust.vim
-[submodule "webapi-vim"]
-	path = webapi-vim
-	url = https://github.com/mattn/webapi-vim
-[submodule "vimshell.vim"]
-	path = vimshell.vim
-	url = https://github.com/Shougo/vimshell.vim
-[submodule "vimproc.vim"]
-	path = vimproc.vim
-	url = https://github.com/Shougo/vimproc.vim
-[submodule "unite.vim"]
-	path = unite.vim
-	url = https://github.com/shougo/unite.vim

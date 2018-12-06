@@ -13,3 +13,6 @@
 [submodule "vim-reason-plus"]
 	path = vim-reason-plus
 	url = https://github.com/reasonml-editor/vim-reason-plus
+[submodule "dircolors-solarized"]
+	path = dircolors-solarized
+	url = https://github.com/seebi/dircolors-solarized

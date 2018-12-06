@@ -67,7 +67,7 @@ eval $(dircolors ~/.dir_colors)
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 
 # List direcory contents
-#export LS_OPTIONS='--color'
+export LS_OPTIONS='--color'
 alias lsa='ls -lah $LS_OPTIONS'
 alias l='ls -la $LS_OPTIONS'
 alias ll='ls -l $LS_OPTIONS'

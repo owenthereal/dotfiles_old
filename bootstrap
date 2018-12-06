@@ -36,6 +36,7 @@ files = {
   current_file('vimux') => home_file('.janus', 'vimux'),
   current_file('vim-jsx') => home_file('.janus', 'vim-jsx'),
   current_file('rust.vim') => home_file('.janus', 'rust.vim'),
+  current_file('vim-reason-plus') => home_file('.janus', 'vim-reason-plus'),
 }
 
 files.each do |from, to|

@@ -1,15 +1,3 @@
-[submodule "dircolors-solarized"]
-  path = dircolors-solarized
-  url = git://github.com/seebi/dircolors-solarized.git
-[submodule "gocode"]
-	path = gocode
-	url = git://github.com/nsf/gocode.git
-[submodule "tabular"]
-	path = tabular
-	url = https://github.com/godlygeek/tabular
-[submodule "vimux"]
-	path = vimux
-	url = git://github.com/benmills/vimux.git
 [submodule "dart-vim-plugin"]
 	path = dart-vim-plugin
 	url = git://github.com/dart-lang/dart-vim-plugin.git
@@ -22,3 +10,6 @@
 [submodule "rust.vim"]
 	path = rust.vim
 	url = https://github.com/rust-lang/rust.vim
+[submodule "vim-reason-plus"]
+	path = vim-reason-plus
+	url = https://github.com/reasonml-editor/vim-reason-plus

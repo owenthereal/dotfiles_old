@@ -29,11 +29,11 @@ ZSH_THEME="robbyrussell"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git github osx brew gem lein mvim rake sublime bundler golang z hub)
+plugins=(git github osx brew gem mvim rake bundler golang z hub)
 
 source $ZSH/oh-my-zsh.sh
 
-export PS1="🚀  $PS1"
+#export PS1="🚀  $PS1"
 
 export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:$PATH
 
@@ -49,7 +49,6 @@ export PATH=$GOPATH/bin:$HOME/.cargo/bin:$HOME/.vim-go:$PATH
 # Java Env
 export JAVA_HOME=$(/usr/libexec/java_home -v 9)
 export JAVA_OPTS="-Xmx1024m"
-export ANDROID_HOME=$(brew --prefix)/opt/android-sdk
 
 # Ruby env
 export RI="--format ansi --width 70"
@@ -64,7 +63,7 @@ export PATH=$HOME/bin:/Applications/dart/dart-sdk/bin:/Applications/dart/Chromiu
 unsetopt correct_all
 
 # Enable color for ls
-#eval $(dircolors ~/.dir_colors)
+eval $(dircolors ~/.dir_colors)
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 
 # List direcory contents
@@ -136,3 +135,21 @@ heroku_cloud_display() {
 
 # custom
 [ -f $HOME/.custom.sh ] && source $HOME/.custom.sh
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '$HOME/bin/google-cloud-sdk/path.zsh.inc' ]; then source '$HOME/bin/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '$HOME/bin/google-cloud-sdk/completion.zsh.inc' ]; then source '$HOME/bin/google-cloud-sdk/completion.zsh.inc'; fi
+
+if [ -f '$HOME/.cargo/env' ]; then source '$HOME/.cargo/env'; fi
+
+export PATH=$HOME/bin/google-cloud-sdk/bin:$PATH
+export PATH=/usr/local/kubebuilder/bin:$PATH
+export PATH=$HOME/bin/flutter/bin:$PATH
+
+export PATH="$(brew --prefix)/opt/qt/bin:$PATH"
+export QT_HOMEBREW=true
+
+ulimit -n 524288
+ulimit -u 2048

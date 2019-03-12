@@ -145,7 +145,7 @@ if [ -f '$HOME/bin/google-cloud-sdk/completion.zsh.inc' ]; then source '$HOME/bi
 if [ -f '$HOME/.cargo/env' ]; then source '$HOME/.cargo/env'; fi
 
 export PATH=$HOME/bin/google-cloud-sdk/bin:$PATH
-export PATH=/usr/local/kubebuilder/bin:$PATH
+export PATH=$PATH:/usr/local/kubebuilder/bin
 export PATH=$HOME/bin/flutter/bin:$PATH
 
 export PATH="$(brew --prefix)/opt/qt/bin:$PATH"

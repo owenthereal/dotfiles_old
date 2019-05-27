@@ -35,7 +35,7 @@ source $ZSH/oh-my-zsh.sh
 
 #export PS1="🚀  $PS1"
 
-export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:$PATH
+export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:$PATH
 
 export SHELL=$(brew --prefix)/bin/zsh
 
@@ -44,7 +44,7 @@ export TERM=xterm-256color
 
 # Go Env
 export GOPATH=$HOME/gocode
-export PATH=$GOPATH/bin:$HOME/.cargo/bin:$HOME/.vim-go:$PATH
+export PATH=$GOPATH/bin:$HOME/.cargo/bin:$PATH
 
 # Java Env
 export JAVA_HOME=$(/usr/libexec/java_home -v 9)
@@ -56,8 +56,7 @@ export RI="--format ansi --width 70"
 # Other Env
 export DART_FLAGS='--enable_type_checks --enable_asserts'
 export PATH=$(brew --prefix coreutils)/libexec/gnubin:/usr/local/bin:/usr/local/sbin:$PATH
-export PATH=$HOME/.dotfiles/depot_tools:$PATH
-export PATH=$HOME/bin:/Applications/dart/dart-sdk/bin:/Applications/dart/Chromium.app/Contents/MacOS:$PATH
+export PATH=$HOME/bin:$PATH
 
 # Customize to your needs...
 unsetopt correct_all
@@ -153,3 +152,10 @@ export QT_HOMEBREW=true
 
 ulimit -n 524288
 ulimit -u 2048
+
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /usr/local/bin/mc mc
+
+# Wasmer
+export WASMER_DIR="$HOME/.wasmer"
+[ -s "$WASMER_DIR/wasmer.sh" ] && source "$WASMER_DIR/wasmer.sh"  # This loads wasmer

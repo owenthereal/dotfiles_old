@@ -48,7 +48,6 @@ puts
 puts
 
 go_packs = [
-  'github.com/kardianos/govendor',
   'github.com/nsf/gocode',
   'github.com/jingweno/odt',
 ]

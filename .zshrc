@@ -35,7 +35,7 @@ source $ZSH/oh-my-zsh.sh
 
 #export PS1="🚀  $PS1"
 
-export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:$PATH
+export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH
 
 export SHELL=$(brew --prefix)/bin/zsh
 

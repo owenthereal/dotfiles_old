@@ -59,7 +59,12 @@ autocmd InsertLeave * if pumvisible() == 0|silent! pclose|endif
 
 let g:go_fmt_command = "goimports"
 let g:go_auto_sameids = 1
-let g:go_auto_sameids = 1
+let g:go_auto_type_info = 1
+let g:go_def_mode='gopls'
+let g:go_info_mode='gopls'
+set completeopt=menuone
+highlight PmenuSel ctermfg=blue guifg=blue
+highlight PmenuThumb ctermbg=blue guibg=blue
 
 let g:slime_target = "tmux"
 let g:tagbar_ctags_bin = substitute(system("echo $(brew --prefix)/bin/ctags"), '[\]\|[[:cntrl:]]', '', 'g')

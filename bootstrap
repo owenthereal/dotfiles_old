@@ -50,6 +50,7 @@ puts
 go_packs = [
   'github.com/nsf/gocode',
   'github.com/jingweno/odt',
+	'golang.org/x/tools/gopls@latest',
 ]
 
 go_packs.each do |go_pack|

@@ -158,6 +158,8 @@ complete -o nospace -C /usr/local/bin/mc mc
 
 export GO111MODULE=auto
 
+export PATH="$(brew --prefix)/opt/gnu-sed/libexec/gnubin:$PATH"
+
 # Wasmer
 export WASMER_DIR="$HOME/.wasmer"
 [ -s "$WASMER_DIR/wasmer.sh" ] && source "$WASMER_DIR/wasmer.sh"  # This loads wasmer
